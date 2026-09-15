@@ -181,6 +181,33 @@
             <p>Fundamental Rights, Directive Principles, Writ Jurisdictions, and Landmark Judgments.</p>
         </div>
     </div>
+    <!-- Post Publish Box Section -->
+    <div class="publish-section">
+        <div class="publish-box">
+            <h2>📝 Add Study Notes / Case Laws</h2>
+            <form id="studyPostForm">
+                <div class="form-group">
+                    <label for="postCategory">Select Subject:</label>
+                    <select id="postCategory" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cbd5e0; margin-bottom: 15px;" required>
+                        <option value="Civil Law (CPC)">Civil Law (CPC)</option>
+                        <option value="Criminal Law (BNSS/CrPC)">Criminal Law (BNSS/CrPC)</option>
+                        <option value="Constitutional Law">Constitutional Law</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="postText">Your Notes:</label>
+                    <textarea id="postText" rows="4" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #cbd5e0; margin-bottom: 15px; resize: vertical;" placeholder="Type your important exam notes or case laws here..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Publish Note</button>
+            </form>
+        </div>
+        
+        <!-- Published Posts Display Area -->
+        <div id="feedArea" class="feed-container">
+            <h3 style="color: var(--primary-color); border-bottom: 2px solid #edf2f7; padding-bottom: 10px;">Recent Study Notes</h3>
+            <div id="postsList"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
