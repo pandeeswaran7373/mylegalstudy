@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil Law (CPC) - My Legal Study Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1a365d; 
+            --accent-color: #d69e2e; 
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-color: #edf2f7;
+        }
+
+        body {
+            margin: 0; padding: 0; font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color); color: var(--text-dark);
+        }
+
+        h1, h2, h3 { font-family: 'Merriweather', serif; }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-color); color: var(--text-light);
+            padding: 1rem 5%; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--accent-color); }
+        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+        .nav-links li a { color: var(--text-light); text-decoration: none; font-weight: 600; }
+        .nav-links li a:hover { color: var(--accent-color); }
+
+        /* CPC Header */
+        .page-header {
+            background-color: var(--primary-color);
+            color: white; padding: 40px 20px; text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+        .page-header h1 { margin: 0; font-size: 2.5rem; }
+
+        /* Smart Intro Section */
+        .content-container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .intro-box {
+            background: white; padding: 30px; border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-left: 5px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+        .intro-box h2 { color: var(--primary-color); margin-top: 0; }
+        
+        .cpc-structure {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;
+        }
+        .structure-card {
+            background: var(--bg-color); padding: 20px; border-radius: 8px; text-align: center; border: 1px solid #cbd5e0;
+        }
+        .structure-card h3 { color: var(--primary-color); font-size: 1.8rem; margin: 10px 0; }
+        .structure-card span { display: block; font-size: 0.9rem; color: #4a5568; font-weight: bold; }
+
+        footer { text-align: center; padding: 20px; background-color: var(--primary-color); color: var(--text-light); margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">LexScholar</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="cpc.html">CPC Notes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Civil Procedure Code, 1908</h1>
+        <p>A smart, simplified guide to CPC structure and jurisdiction</p>
+    </div>
+
+    <div class="content-container">
+        <div class="intro-box">
+            <h2>The "Smart" Intro to CPC Structure</h2>
+            <p>The Code of Civil Procedure (CPC) is divided into <strong>two</strong> main parts. The sections provide the substantive framework (jurisdiction, powers), while the Orders/Rules provide the step-by-step procedural machinery to implement those sections.</p>
+            
+            <div class="cpc-structure">
+                <div class="structure-card">
+                    <span>THE BODY OF THE CODE</span>
+                    <h3>158 Sections</h3>
+                    <p>Divided into <strong>11 Parts</strong>.</p>
+                    <p style="font-size: 0.85rem;"><em>Nature: Substantive. Can only be amended by the Parliament/Legislature.</em></p>
+                </div>
+                
+                <div class="structure-card">
+                    <span>THE FIRST SCHEDULE</span>
+                    <h3>51 Orders</h3>
+                    <p>Each Order contains multiple <strong>Rules</strong>.</p>
+                    <p style="font-size: 0.85rem;"><em>Nature: Procedural. High Courts can amend rules based on local needs.</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Legal Study Portal by Pandeeswaran S.</p>
+    </footer>
+</body>
+</html>
