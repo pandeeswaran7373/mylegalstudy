@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Legal Study Portal</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* அடிப்படை CSS அமைப்புகள் (முந்தைய பக்கத்தின் அதே டிசைன்) */
+        :root {
+            --primary-color: #1a365d; /* Dark Navy Blue */
+            --accent-color: #d69e2e; /* Gold */
+            --text-dark: #2d3748;
+            --text-light: #f7fafc;
+            --bg-color: #edf2f7;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid var(--primary-color);
+            flex: 1;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-header h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .contact-header p {
+            font-size: 1.1rem;
+            color: #4a5568;
+        }
+
+        .profile-info {
+            background-color: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .profile-info h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .profile-info p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #ecc94b;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">LexScholar</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#subjects">Subjects</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Content -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Get in Touch</h1>
+            <p>Have questions about legal studies or want to discuss case laws? Reach out to me!</p>
+        </div>
+
+        <!-- Personal Info Section -->
+        <div class="profile-info">
+            <h3>Contact Information</h3>
+            <p><strong>Name:</strong> Pandeeswaran S</p>
+            <p><strong>Profile:</strong> Law Student</p>
+            <p><strong>Institution:</strong> Rabindranath Tagore University (RNTU), Bhopal</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Legal Study Portal by Pandeeswaran S. "Ignorantia juris non excusat".</p>
+    </footer>
+
+</body>
+</html>
