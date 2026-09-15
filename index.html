@@ -142,8 +142,112 @@
             color: var(--text-light);
             margin-top: auto;
         }
+        /* Publish Box & Feed Styles */
+        .publish-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .publish-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--accent-color);
+            margin-bottom: 40px;
+        }
+        .publish-box h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .feed-container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .post-card {
+            background: var(--bg-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .post-category {
+            font-size: 0.85rem;
+            background: var(--accent-color);
+            color: var(--primary-color);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .post-content {
+            margin: 0;
+            color: var(--text-dark);
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        .post-date {
+            font-size: 0.8rem;
+            color: #718096;
+            margin-top: 10px;
+            display: block;
+        }
     </style>
 </head>
+<script>
+        // Form submission event
+        document.getElementById('studyPostForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // பக்கத்தை ரீலோட் செய்வதைத் தடுக்கும்
+            
+            const category = document.getElementById('postCategory').value;
+            const text = document.getElementById('postText').value;
+            const date = new Date().toLocaleString();
+
+            const post = { category, text, date };
+            
+            // LocalStorage-ல் சேமித்தல்
+            let posts = JSON.parse(localStorage.getItem('myStudyPosts')) || [];
+            posts.unshift(post); // புதிய பதிவை முதலில் சேர்க்க
+            localStorage.setItem('myStudyPosts', JSON.stringify(posts));
+
+            // டெக்ஸ்ட் பாக்ஸை காலி செய்தல்
+            document.getElementById('postText').value = '';
+            
+            // பதிவுகளை மீண்டும் லோட் செய்தல்
+            loadPosts();
+        });
+
+        // சேமிக்கப்பட்ட பதிவுகளை திரையில் காட்ட
+        function loadPosts() {
+            const postsList = document.getElementById('postsList');
+            const posts = JSON.parse(localStorage.getItem('myStudyPosts')) || [];
+            
+            if(posts.length === 0) {
+                postsList.innerHTML = '<p style="color:#718096; text-align:center;">No notes published yet. Start posting!</p>';
+                return;
+            }
+
+            postsList.innerHTML = '';
+            posts.forEach(post => {
+                const postHTML = `
+                    <div class="post-card">
+                        <span class="post-category">${post.category}</span>
+                        <p class="post-content">${post.text}</p>
+                        <span class="post-date">Posted on: ${post.date}</span>
+                    </div>
+                `;
+                postsList.innerHTML += postHTML;
+            });
+        }
+
+        // பக்கம் லோட் ஆகும்போது பதிவுகளைக் காட்ட
+        loadPosts();
+    </script>
 <body>
 
     <!-- Navigation -->
